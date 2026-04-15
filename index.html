@@ -7,108 +7,106 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-        @keyframes pulse-soft { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.05); } }
-        .neon-border { border: 1px solid rgba(6, 182, 212, 0.5); box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); }
-        .premium-glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
-        .text-neon { text-shadow: 0 0 15px rgba(34, 211, 238, 0.8); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        @keyframes pulse-soft { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.05); } }
+        .premium-glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
+        .text-neon { text-shadow: 0 0 15px rgba(34, 211, 238, 0.6); }
         body { background: radial-gradient(circle at top, #1e293b 0%, #020617 50%); color: #f8fafc; font-family: 'Inter', sans-serif; }
     </style>
 </head>
 <body class="selection:bg-cyan-500 selection:text-black overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 premium-glass py-4 px-8 flex justify-between items-center border-b border-white/5">
-        <div class="text-2xl font-black text-cyan-400 italic tracking-tighter uppercase">AINK</div>
-        <div class="hidden md:flex gap-10 text-[11px] font-bold tracking-[0.3em] uppercase text-gray-400">
+    <nav class="fixed w-full z-50 premium-glass py-3 px-6 md:px-8 flex justify-between items-center border-b border-white/5">
+        <div class="text-xl md:text-2xl font-black text-cyan-400 italic tracking-tighter uppercase">AINK</div>
+        <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400">
             <a href="#about" class="hover:text-cyan-400 transition-all">About</a>
             <a href="#tokenomics" class="hover:text-cyan-400 transition-all">Tokenomics</a>
             <a href="#roadmap" class="hover:text-cyan-400 transition-all">Roadmap</a>
         </div>
-        <a href="https://pancakeswap.finance" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-2.5 rounded-full font-black text-[10px] shadow-[0_0_25px_rgba(6,182,212,0.5)] transition-all transform hover:scale-110 uppercase">Buy $AINK</a>
+        <a href="https://pancakeswap.finance" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2 rounded-full font-black text-[10px] shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all transform hover:scale-105 uppercase">Buy $AINK</a>
     </nav>
 
-    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 pb-16">
         
-        <div class="relative w-80 h-80 md:w-[450px] md:h-[450px] mb-8 mx-auto animate-[float_6s_ease-in-out_infinite]">
-            <div class="absolute inset-0 bg-cyan-500 rounded-full blur-[120px] opacity-30 animate-[pulse-soft_4s_infinite]"></div>
-            <div class="relative w-full h-full rounded-full bg-[#0f172a]/80 border-[3px] border-cyan-500/40 flex items-center justify-center shadow-[0_0_80px_rgba(6,182,212,0.3)]">
-                <img src="https://raw.githubusercontent.com/ainkcoin/ainkcoin/main/ainkcoin_logo_trust.png" alt="AINK Master Logo" class="w-[95%] h-auto relative z-10 drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+        <div class="relative w-48 h-48 md:w-72 md:h-72 mb-8 mx-auto animate-[float_6s_ease-in-out_infinite]">
+            <div class="absolute inset-0 bg-cyan-500 rounded-full blur-[70px] opacity-30 animate-[pulse-soft_4s_infinite]"></div>
+            <div class="relative w-full h-full rounded-full bg-[#0f172a] border-2 border-cyan-500/40 flex items-center justify-center shadow-[0_0_50px_rgba(6,182,212,0.2)]">
+                <img src="https://raw.githubusercontent.com/ainkcoin/ainkcoin/main/ainkcoin_logo_trust.png" alt="AINK Master Logo" class="w-[85%] h-auto relative z-10 drop-shadow-xl">
             </div>
         </div>
 
-        <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter uppercase leading-none">
-            Airdrop Insight <span class="text-cyan-400 text-neon italic">Knowledge</span>
+        <h1 class="text-3xl md:text-6xl font-black mb-4 tracking-tighter uppercase leading-snug md:leading-tight">
+            Airdrop Insight <br class="block md:hidden"> <span class="text-cyan-400 text-neon italic">Knowledge</span>
         </h1>
-        <p class="text-gray-400 max-w-3xl text-lg md:text-2xl mb-12 font-light leading-relaxed mx-auto">
-            The elite AI-powered ecosystem for decentralized analytics and hyper-growth knowledge.
+        <p class="text-gray-400 max-w-2xl text-sm md:text-xl mb-10 font-light leading-relaxed mx-auto">
+            The elite ecosystem for decentralized analytics and hyper-growth knowledge.
         </p>
 
-        <div class="flex flex-wrap gap-5 mb-16 justify-center">
-            <a href="https://x.com/AINKCOIN" target="_blank" class="flex items-center gap-4 bg-white text-black px-10 py-4 rounded-full font-black transition-all transform hover:scale-110 shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-                <i class="fa-brands fa-x-twitter text-2xl"></i>
-                <span class="tracking-widest uppercase">Follow @AINKCOIN</span>
+        <div class="flex flex-col md:flex-row gap-4 mb-12 justify-center w-full max-w-sm md:max-w-none mx-auto">
+            <a href="https://x.com/AINKCOIN" target="_blank" class="flex items-center justify-center gap-3 bg-white text-black px-6 py-3 md:px-8 md:py-3.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.15)] w-full md:w-auto">
+                <i class="fa-brands fa-x-twitter text-lg"></i>
+                <span class="tracking-widest uppercase text-xs md:text-sm">Follow @AINKCOIN</span>
             </a>
-            <div class="flex items-center gap-4 bg-slate-800/50 text-gray-500 px-10 py-4 rounded-full border border-white/5 cursor-not-allowed">
-                <i class="fa-brands fa-telegram text-2xl"></i>
-                <span class="font-bold tracking-widest uppercase">Coming Soon</span>
+            <div class="flex items-center justify-center gap-3 bg-slate-800/50 text-gray-500 px-6 py-3 md:px-8 md:py-3.5 rounded-full border border-white/5 cursor-not-allowed w-full md:w-auto">
+                <i class="fa-brands fa-telegram text-lg"></i>
+                <span class="tracking-widest uppercase text-xs md:text-sm font-bold">Coming Soon</span>
             </div>
         </div>
 
-        <div class="premium-glass p-8 rounded-[2rem] border-cyan-500/40 mx-auto w-full max-w-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-            <span class="text-xs font-black text-cyan-500 uppercase tracking-[0.4em] mb-4 block">Smart Contract Address</span>
-            <code class="text-lg md:text-2xl text-white font-mono break-all select-all bg-black/40 py-5 px-6 rounded-2xl block border border-cyan-500/20 text-neon">0xE5FA436a7424a28fc32CA101cfDB4c39709521A9</code>
-            <p class="text-[11px] text-gray-500 mt-4 uppercase tracking-widest font-bold">Verified & Secure • BSC Mainnet</p>
+        <div class="premium-glass p-5 md:p-8 rounded-[2rem] border-cyan-500/30 mx-auto w-full max-w-3xl shadow-2xl">
+            <span class="text-[10px] md:text-xs font-black text-cyan-500 uppercase tracking-[0.3em] mb-3 block">Smart Contract Address</span>
+            <code class="text-sm md:text-xl text-white font-mono break-all select-all bg-black/50 py-3 md:py-4 px-4 md:px-6 rounded-xl block border border-cyan-500/20 text-neon">0xE5FA436a7424a28fc32CA101cfDB4c39709521A9</code>
         </div>
     </section>
 
-    <section id="tokenomics" class="py-40 px-6 relative">
+    <section id="tokenomics" class="py-24 md:py-32 px-6 relative">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-20"></div>
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-7xl font-black text-center mb-24 uppercase tracking-widest italic text-neon">Tokenomics</h2>
-            <div class="grid lg:grid-cols-3 gap-10">
-                <div class="premium-glass p-12 rounded-[3rem] border-t-8 border-t-cyan-500 transition-all hover:-translate-y-5 hover:shadow-[0_20px_60px_rgba(6,182,212,0.2)] group text-center">
-                    <div class="text-cyan-400 text-7xl font-black mb-6 italic group-hover:scale-110 transition-transform">0%</div>
-                    <h4 class="text-2xl font-black text-white mb-4 uppercase tracking-tighter">Transaction Tax</h4>
-                    <p class="text-gray-400 leading-relaxed font-light">Zero buy and sell tax. Maximum efficiency for long-term holders and rapid traders alike.</p>
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black text-center mb-16 uppercase tracking-widest italic text-neon">Tokenomics</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="premium-glass p-8 md:p-10 rounded-3xl border-t-4 border-t-cyan-500 text-center transition-all hover:-translate-y-2">
+                    <div class="text-cyan-400 text-5xl md:text-6xl font-black mb-4 italic">0%</div>
+                    <h4 class="text-lg font-black text-white mb-2 uppercase tracking-tighter">Transaction Tax</h4>
+                    <p class="text-gray-400 text-sm font-light">Zero buy and sell tax. Maximum efficiency.</p>
                 </div>
-                <div class="premium-glass p-12 rounded-[3rem] border-t-8 border-t-blue-500 transition-all hover:-translate-y-5 hover:shadow-[0_20px_60px_rgba(59,130,246,0.2)] group text-center">
-                    <div class="text-blue-400 text-7xl font-black mb-6 italic group-hover:scale-110 transition-transform">100%</div>
-                    <h4 class="text-2xl font-black text-white mb-4 uppercase tracking-tighter">LP Burned</h4>
-                    <p class="text-gray-400 leading-relaxed font-light">Total liquidity burned at launch. Absolute security. Rug-proof by architectural design.</p>
+                <div class="premium-glass p-8 md:p-10 rounded-3xl border-t-4 border-t-blue-500 text-center transition-all hover:-translate-y-2">
+                    <div class="text-blue-400 text-5xl md:text-6xl font-black mb-4 italic">100%</div>
+                    <h4 class="text-lg font-black text-white mb-2 uppercase tracking-tighter">LP Burned</h4>
+                    <p class="text-gray-400 text-sm font-light">Total liquidity burned at launch. Absolute security.</p>
                 </div>
-                <div class="premium-glass p-12 rounded-[3rem] border-t-8 border-t-purple-500 transition-all hover:-translate-y-5 hover:shadow-[0_20px_60px_rgba(168,85,247,0.2)] group text-center">
-                    <div class="text-purple-400 text-7xl font-black mb-6 italic group-hover:scale-110 transition-transform">100M</div>
-                    <h4 class="text-2xl font-black text-white mb-4 uppercase tracking-tighter">Fixed Supply</h4>
-                    <p class="text-gray-400 leading-relaxed font-light">Strategic supply of 100,000,000 $AINK tokens. No minting function. Built for scarcity.</p>
+                <div class="premium-glass p-8 md:p-10 rounded-3xl border-t-4 border-t-purple-500 text-center transition-all hover:-translate-y-2">
+                    <div class="text-purple-400 text-5xl md:text-6xl font-black mb-4 italic">100M</div>
+                    <h4 class="text-lg font-black text-white mb-2 uppercase tracking-tighter">Fixed Supply</h4>
+                    <p class="text-gray-400 text-sm font-light">Strategic capped supply. Built for scarcity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="roadmap" class="py-40 px-6 border-t border-white/5">
+    <section id="roadmap" class="py-24 md:py-32 px-6 border-t border-white/5">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-black text-center mb-24 uppercase tracking-widest text-neon">Roadmap</h2>
-            <div class="space-y-24">
-                <div class="flex gap-12 items-start group">
-                    <div class="text-5xl font-black text-cyan-500/20 group-hover:text-cyan-500 transition-colors">01</div>
+            <h2 class="text-3xl md:text-5xl font-black text-center mb-16 uppercase tracking-widest text-neon">Roadmap</h2>
+            <div class="space-y-16">
+                <div class="flex gap-6 md:gap-10 items-start">
+                    <div class="text-4xl md:text-5xl font-black text-cyan-500/40">01</div>
                     <div>
-                        <h4 class="text-2xl font-black text-white uppercase italic mb-3 tracking-tighter">Phase 01: Genesis Launch</h4>
-                        <p class="text-gray-500 text-lg font-light leading-relaxed">Official Web Deployment • Smart Contract Audit • Community Seed Growth • Branding Dominance.</p>
+                        <h4 class="text-xl md:text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">Phase 01: Genesis Launch</h4>
+                        <p class="text-gray-500 text-sm md:text-base font-light">Official Web Deployment • Smart Contract Audit • Community Growth.</p>
                     </div>
                 </div>
-                <div class="flex gap-12 items-start opacity-30">
-                    <div class="text-5xl font-black text-white/10">02</div>
+                <div class="flex gap-6 md:gap-10 items-start opacity-40">
+                    <div class="text-4xl md:text-5xl font-black text-white/20">02</div>
                     <div>
-                        <h4 class="text-2xl font-black text-white uppercase italic mb-3 tracking-tighter">Phase 02: Market Expansion</h4>
-                        <p class="text-gray-500 text-lg font-light leading-relaxed">PancakeSwap Listing • Tier-1 Marketing Push • Whitepaper 1.0 Release • CMC/Coingecko Fast-track.</p>
+                        <h4 class="text-xl md:text-2xl font-black text-white uppercase italic mb-2 tracking-tighter">Phase 02: Expansion</h4>
+                        <p class="text-gray-500 text-sm md:text-base font-light">PancakeSwap Listing • Tier-1 Marketing Push • Whitepaper Release.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/10 text-center">
-        <p class="text-[10px] text-gray-600 uppercase tracking-[0.6em] font-black">© 2026 Airdrop Insight Knowledge | Elite Intelligence</p>
+    <footer class="py-12 md:py-20 border-t border-white/10 text-center px-6">
+        <p class="text-[9px] md:text-[10px] text-gray-600 uppercase tracking-[0.4em] md:tracking-[0.6em] font-black">© 2026 Airdrop Insight Knowledge | Elite Intelligence</p>
     </footer>
 
 </body>
