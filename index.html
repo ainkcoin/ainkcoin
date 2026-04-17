@@ -3,237 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airdrop Insight Knowledge | $AINK Official</title>
+    <title>Airdrop Insight Knowledge | $AINK Official Security Protocol</title>
     
-    <meta name="description" content="AINK - Decentralized Intelligence & Analytics Layer. Empowering the future of web3 communities.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <meta name="referrer" content="no-referrer">
+    
+    <meta name="description" content="AINK - Neural Analytics & Decentralized Intelligence. Rug-Proof by Design.">
     <meta property="og:title" content="Airdrop Insight Knowledge | $AINK">
     <meta property="og:image" content="https://airdropinsight.com/ainkcoin_logo_trust.png">
-    <meta property="og:url" content="https://airdropinsight.com/">
     
     <link rel="icon" href="aink-coin.svg" type="image/svg+xml">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        :root { --cyber-cyan: #00e5ff; --cyber-blue: #0066ff; --bg-deep: #030712; }
+        :root { --cyber-cyan: #00e5ff; --cyber-blue: #0066ff; --bg-deep: #030712; --neon-glow: 0 0 20px rgba(0, 229, 255, 0.5); }
         body { background-color: var(--bg-deep); font-family: 'Space Grotesk', sans-serif; color: white; overflow-x: hidden; }
         
-        /* Background Animasi Matrix/Grid */
+        /* High-End Matrix Grid Animation */
         .cyber-grid { 
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2;
-            background-image: 
-                linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
             background-size: 50px 50px;
             transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
             animation: grid-move 20s linear infinite;
         }
-        @keyframes grid-move { 0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); } 100% { transform: perspective(500px) rotateX(60deg) translateY(50px) translateZ(-200px); } }
+        @keyframes grid-move { 0% { transform: perspective(500px) rotateX(60deg) translateY(0); } 100% { transform: perspective(500px) rotateX(60deg) translateY(50px); } }
 
-        /* Floating Animation Ultra Smooth */
-        @keyframes hover-float { 
-            0%, 100% { transform: translateY(0px) scale(1); filter: drop-shadow(0 0 15px rgba(0,229,255,0.4)); } 
-            50% { transform: translateY(-20px) scale(1.02); filter: drop-shadow(0 0 40px rgba(0,229,255,0.8)); } 
-        }
+        /* Floating & Glow Effects */
         .diamond-float { animation: hover-float 4s ease-in-out infinite; }
+        @keyframes hover-float { 
+            0%, 100% { transform: translateY(0px) scale(1); filter: drop-shadow(var(--neon-glow)); } 
+            50% { transform: translateY(-20px) scale(1.05); filter: drop-shadow(0 0 40px rgba(0,229,255,0.8)); } 
+        }
 
-        /* Premium Glassmorphism */
-        .glass-panel { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0, 229, 255, 0.1); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); }
-        .glass-btn { background: rgba(0, 229, 255, 0.05); border: 1px solid rgba(0, 229, 255, 0.2); backdrop-filter: blur(10px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .glass-btn:hover { background: rgba(0, 229, 255, 0.2); border-color: var(--cyber-cyan); transform: translateY(-5px); box-shadow: 0 10px 20px -10px var(--cyber-cyan); }
+        /* Glassmorphism Ultra Premium */
+        .glass-panel { background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(25px); border: 1px solid rgba(0, 229, 255, 0.15); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8); }
+        .glass-btn { background: rgba(0, 229, 255, 0.03); border: 1px solid rgba(0, 229, 255, 0.2); backdrop-filter: blur(10px); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .glass-btn:hover { background: rgba(0, 229, 255, 0.15); border-color: var(--cyber-cyan); transform: scale(1.05) translateY(-5px); box-shadow: var(--neon-glow); }
 
-        /* Text Gradients */
-        .text-glow { background: linear-gradient(to right, #fff, var(--cyber-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .mono-code { font-family: 'JetBrains Mono', monospace; }
+        .text-glow { background: linear-gradient(90deg, #fff, var(--cyber-cyan), #fff); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shine 3s linear infinite; }
+        @keyframes shine { to { background-position: 200% center; } }
         
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-deep); }
-        ::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.3); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--cyber-cyan); }
+        .mono-code { font-family: 'JetBrains Mono', monospace; }
     </style>
 </head>
 <body class="relative min-h-screen flex flex-col antialiased">
 
     <div class="cyber-grid"></div>
-    <div class="fixed top-1/4 left-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-[150px] -z-10 mix-blend-screen"></div>
-    <div class="fixed bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[150px] -z-10 mix-blend-screen"></div>
 
-    <nav class="fixed top-0 w-full z-50 p-4 md:p-6">
-        <div class="max-w-7xl mx-auto glass-panel rounded-full px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 225" class="w-full h-full">
-                        <path d="M 45,88 C 40,69 28,57 40,39 C 48,24 63,17 100,17 C 137,17 152,24 160,39 C 172,57 160,69 155,88 L 45,88 z" fill="#00A8FF" stroke="#26334A" stroke-width="5" />
-                        <rect x="78.5" y="139" width="43" height="39" rx="3" fill="#00A8FF" stroke="#26334A" stroke-width="3.5" />
-                        <text x="100" y="158.5" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="9" font-weight="900">$AINK</text>
-                        <circle cx="100" cy="158.5" r="41" fill="transparent" stroke="#00A8FF" stroke-width="6.5" />
-                    </svg>
+    <nav class="fixed top-0 w-full z-50 p-4">
+        <div class="max-w-7xl mx-auto glass-panel rounded-full px-8 py-4 flex justify-between items-center border-white/5">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 diamond-float">
+                    <svg viewBox="0 0 200 225" class="w-full h-full"><path d="M 45,88 C 40,69 28,57 40,39 C 48,24 63,17 100,17 C 137,17 152,24 160,39 C 172,57 160,69 155,88 L 45,88 z" fill="#00e5ff"/></svg>
                 </div>
-                <span class="text-xl md:text-2xl font-black tracking-tighter text-glow italic">AINK</span>
+                <span class="text-2xl font-black tracking-tighter text-glow italic">AINK</span>
             </div>
             
-            <div class="hidden md:flex gap-6 items-center text-gray-400">
-                <a href="https://x.com/AINKCOIN" target="_blank" class="hover:text-[#00e5ff] transition-colors"><i class="fa-brands fa-x-twitter text-xl"></i></a>
-                <a href="https://www.youtube.com/@AINKCOIN" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
-                <a href="https://t.me/AinkcoinOfficial" target="_blank" class="hover:text-[#24A1DE] transition-colors"><i class="fa-brands fa-telegram text-xl"></i></a>
+            <div class="hidden md:flex gap-8 items-center text-gray-400">
+                <a href="https://x.com/AINKCOIN" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-all"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                <a href="https://t.me/AinkcoinOfficial" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-all"><i class="fa-brands fa-telegram text-xl"></i></a>
             </div>
 
-            <a href="https://pancakeswap.finance" target="_blank" class="bg-cyan-400 text-black px-6 py-2 rounded-full font-black text-[11px] uppercase tracking-widest shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:bg-white hover:scale-105 transition-all">
-                Trade Now
+            <a href="https://dex.coinmarketcap.com/id/token/bsc/0xe5fa436a7424a28fc32CA101cfDB4c39709521A9/" target="_blank" rel="noopener noreferrer" class="bg-cyan-500 text-black px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white hover:shadow-cyan-500/50 transition-all active:scale-95">
+                Market Data
             </a>
         </div>
     </nav>
 
-    <main class="flex-grow flex flex-col justify-center items-center px-4 pt-32 pb-20 z-10">
+    <main class="flex-grow flex flex-col items-center px-4 pt-40 pb-20 z-10">
         
-        <div class="relative w-56 h-56 md:w-72 md:h-72 mb-8 diamond-float">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 225" class="w-full h-full">
-                <path d="M 45,88 C 40,69 28,57 40,39 C 48,24 63,17 100,17 C 137,17 152,24 160,39 C 172,57 160,69 155,88 L 45,88 z" fill="#00A8FF" stroke="#26334A" stroke-width="5" />
-                <line x1="100" y1="17" x2="52" y2="88" stroke="#26334A" stroke-width="2.5" />
-                <line x1="100" y1="17" x2="65" y2="88" stroke="#26334A" stroke-width="2.5" />
-                <line x1="100" y1="17" x2="78" y2="88" stroke="#26334A" stroke-width="2.5" />
-                <line x1="100" y1="17" x2="122" y2="88" stroke="#26334A" stroke-width="2.5" />
-                <line x1="100" y1="17" x2="135" y2="88" stroke="#26334A" stroke-width="2.5" />
-                <line x1="100" y1="17" x2="148" y2="88" stroke="#26334A" stroke-width="2.5" />
-                <line x1="48" y1="88" x2="93" y2="139" stroke="#26334A" stroke-width="2.2" />
-                <line x1="62" y1="88" x2="96" y2="139" stroke="#26334A" stroke-width="2.2" />
-                <line x1="77" y1="88" x2="99" y2="139" stroke="#26334A" stroke-width="2.2" />
-                <line x1="123" y1="88" x2="101" y2="139" stroke="#26334A" stroke-width="2.2" />
-                <line x1="138" y1="88" x2="104" y2="139" stroke="#26334A" stroke-width="2.2" />
-                <line x1="152" y1="88" x2="107" y2="139" stroke="#26334A" stroke-width="2.2" />
-                <rect x="78.5" y="139" width="43" height="39" rx="3" fill="#00A8FF" stroke="#26334A" stroke-width="3.5" />
-                <text x="100" y="158.5" text-anchor="middle" dominant-baseline="middle" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="9" font-weight="900">$AINK</text>
-                <circle cx="100" cy="158.5" r="41" fill="transparent" stroke="#00e5ff" stroke-width="6.5" />
-                <line x1="133.5" y1="182" x2="155" y2="198" stroke="#00e5ff" stroke-width="7" stroke-linecap="round" />
-            </svg>
-        </div>
-
-        <div class="text-center max-w-4xl mx-auto mb-12">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-4 uppercase tracking-tighter leading-[0.9]">
-                AIRDROP INSIGHT<br>
-                <span class="text-glow italic">KNOWLEDGE</span>
+        <div class="text-center max-w-5xl mx-auto mb-20">
+            <h1 class="text-6xl md:text-9xl font-black mb-6 uppercase tracking-tighter leading-none">
+                NEURAL<br><span class="text-glow italic">ANALYTICS</span>
             </h1>
-            <p class="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto font-light tracking-wide border-l-2 border-cyan-400 pl-4 text-left md:text-center md:border-none md:pl-0">
-                Deploying <strong class="text-cyan-400">Neural Analytics</strong> for the decentralized era. The ultimate intelligence layer on the Binance Smart Chain.
+            <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto font-light tracking-wide italic">
+                The ultimate Intelligence Layer on Binance Smart Chain. <span class="text-cyan-400 font-bold">LP Burned. Burn Executed. Fully Verified.</span>
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-3xl mb-16">
-            <a href="https://t.me/AinkcoinOfficial" target="_blank" class="glass-btn rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
-                <i class="fa-brands fa-telegram text-3xl text-[#24A1DE] group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-300">Announcements</span>
-            </a>
-            <a href="https://t.me/Ainkchat" target="_blank" class="glass-btn rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
-                <i class="fa-solid fa-users-viewfinder text-3xl text-cyan-400 group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-300">Community Chat</span>
-            </a>
-            <a href="AINK_Whitepaper.pdf" target="_blank" class="glass-btn rounded-2xl p-4 flex flex-col items-center justify-center gap-2 group">
-                <i class="fa-solid fa-file-pdf text-3xl text-red-400 group-hover:scale-110 transition-transform"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-300">Read Manifesto</span>
-            </a>
-        </div>
-
-        <div class="w-full max-w-3xl mb-24">
-            <div class="glass-panel rounded-3xl p-1 relative overflow-hidden group">
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-md"></div>
-                
-                <div class="bg-gray-950/80 rounded-[1.4rem] p-6 md:p-8 relative z-10 border border-white/5">
-                    <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-                        <div class="flex gap-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div class="mono-code text-[10px] text-cyan-400 tracking-[0.2em] uppercase flex items-center gap-2">
-                            <i class="fa-solid fa-shield-halved"></i> Verified Contract (BSC)
-                        </div>
+        <div class="w-full max-w-3xl mb-32">
+            <div class="glass-panel rounded-[2rem] p-2 group">
+                <div class="bg-gray-950/90 rounded-[1.8rem] p-8 border border-white/5">
+                    <div class="flex items-center gap-2 mb-6 mono-code text-[10px] text-cyan-400 tracking-widest">
+                        <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span> SYSTEM: CONTRACT VERIFIED
                     </div>
-                    
-                    <div class="flex flex-col md:flex-row items-center gap-4 cursor-pointer" onclick="copyAddress()">
-                        <div class="flex-grow bg-black/60 p-4 rounded-xl border border-cyan-900/50 w-full text-center md:text-left">
-                            <code id="ca" class="mono-code text-sm md:text-xl text-white break-all selection:bg-cyan-400 selection:text-black">0xE5FA436a7424a28fc32CA101cfDB4c39709521A9</code>
+                    <div class="flex flex-col md:flex-row items-center gap-4">
+                        <div class="flex-grow bg-black/40 p-5 rounded-2xl border border-cyan-500/20 w-full group-hover:border-cyan-500/50 transition-all">
+                            <code id="ca" class="mono-code text-sm md:text-lg text-white break-all">0xE5FA436a7424a28fc32CA101cfDB4c39709521A9</code>
                         </div>
-                        <button class="bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all w-full md:w-auto shadow-[0_0_20px_rgba(0,229,255,0.3)] active:scale-95 flex items-center justify-center gap-2">
-                            <i class="fa-regular fa-copy text-lg"></i>
-                            <span id="copyText">Copy</span>
+                        <button onclick="copyAddress()" class="bg-cyan-500 hover:bg-cyan-400 text-black px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-tighter transition-all w-full md:w-auto active:bg-white">
+                            <span id="copyText">COPY CA</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w-full max-w-4xl px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-widest text-glow italic">Strategic Roadmap</h2>
-                <p class="mono-code text-[10px] text-cyan-500 tracking-[0.3em] uppercase mt-2">Phased Development Plan</p>
+        <div class="w-full max-w-6xl mb-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter">Transparency <span class="text-cyan-400">Protocol</span></h2>
+                <p class="mono-code text-xs text-gray-500 mt-4 tracking-[0.5em]">ON-CHAIN VERIFICATION DASHBOARD</p>
             </div>
-            
-            <div class="relative border-l-2 border-cyan-900/50 ml-4 md:ml-12 space-y-12 pb-8">
-                
-                <div class="relative pl-8 md:pl-12 group">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-cyan-500 rounded-full shadow-[0_0_15px_#00e5ff] group-hover:scale-150 transition-all"></div>
-                    <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-cyan-400 group-hover:border-l-white transition-all">
-                        <h3 class="text-xl font-bold uppercase tracking-wider text-white mb-2">Phase 1: Protocol Genesis</h3>
-                        <ul class="mono-code text-xs text-gray-400 space-y-2">
-                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Smart Contract Deployment</li>
-                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Ecosystem Architecture & Whitepaper</li>
-                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Community Bootstrapping</li>
-                        </ul>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-cyan-400/50 transition-all">
+                    <img src="burn V1 AINKCOIN.jpg" alt="AINK Buyback and Burn" class="w-full h-64 object-cover opacity-80 group-hover:opacity-100 transition-all">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 italic uppercase">5,000,000+ $AINK Burned</h3>
+                        <p class="text-gray-400 text-sm mb-6 mono-code">Strategic buyback and permanent burn to ensure scarcity and long-term value.</p>
+                        <a href="https://bscscan.com/tx/0xb0cae7fc0a348894e742a57d10dce574c583ae2bcaebb89075bf07de3bcf50a0d" target="_blank" rel="noopener noreferrer" class="glass-btn px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest block text-center">Verify Burn Transaction</a>
                     </div>
                 </div>
 
-                <div class="relative pl-8 md:pl-12 group">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-gray-700 rounded-full group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#00e5ff] transition-all"></div>
-                    <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-gray-700 group-hover:border-l-cyan-400 transition-all">
-                        <h3 class="text-xl font-bold uppercase tracking-wider text-gray-300 mb-2">Phase 2: Ecosystem Expansion</h3>
-                        <ul class="mono-code text-xs text-gray-500 space-y-2">
-                            <li><i class="fa-solid fa-lock mr-2 text-gray-600"></i>Airdrop Intelligence DApp Beta</li>
-                            <li><i class="fa-solid fa-lock mr-2 text-gray-600"></i>Strategic Web3 Partnerships</li>
-                            <li><i class="fa-solid fa-lock mr-2 text-gray-600"></i>DEX Liquidity Scaling</li>
-                        </ul>
+                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-cyan-400/50 transition-all">
+                    <img src="$AINK BURN.jpg" alt="AINK LP Burn" class="w-full h-64 object-cover opacity-80 group-hover:opacity-100 transition-all">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 italic uppercase">100% LP Permanent Burn</h3>
+                        <p class="text-gray-400 text-sm mb-6 mono-code">Liquidity initial has been incinerated. Rug-pull is mathematically impossible.</p>
+                        <a href="https://bscscan.com/tx/0x7ca2472980a3ed0a6c9911fd6575380bd27a2e2e0c6ddfb2a5413ea2852b82" target="_blank" rel="noopener noreferrer" class="glass-btn px-6 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest block text-center">Verify Rug-Proof Status</a>
                     </div>
                 </div>
-
-                <div class="relative pl-8 md:pl-12 group">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-gray-700 rounded-full group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#00e5ff] transition-all"></div>
-                    <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-gray-700 group-hover:border-l-cyan-400 transition-all">
-                        <h3 class="text-xl font-bold uppercase tracking-wider text-gray-300 mb-2">Phase 3: Institutional Adoption</h3>
-                        <ul class="mono-code text-xs text-gray-500 space-y-2">
-                            <li><i class="fa-solid fa-lock mr-2 text-gray-600"></i>AI-Driven Analytics Engine</li>
-                            <li><i class="fa-solid fa-lock mr-2 text-gray-600"></i>Tier-1 & Tier-2 CEX Listings</li>
-                            <li><i class="fa-solid fa-lock mr-2 text-gray-600"></i>Ecosystem Revenue Sharing</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
 
     </main>
 
-    <footer class="w-full glass-panel border-t-0 border-b-0 border-x-0 mt-auto py-10 relative z-10">
-        <div class="max-w-4xl mx-auto flex flex-col items-center gap-8">
-            <div class="flex gap-8 md:hidden">
-                <a href="https://x.com/AINKCOIN" target="_blank" class="text-gray-400 hover:text-[#00e5ff] text-2xl transition-all"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.youtube.com/@AINKCOIN" target="_blank" class="text-gray-400 hover:text-red-500 text-2xl transition-all"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://t.me/AinkcoinOfficial" target="_blank" class="text-gray-400 hover:text-[#24A1DE] text-2xl transition-all"><i class="fa-brands fa-telegram"></i></a>
+    <footer class="glass-panel border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <span class="text-3xl font-black text-glow">AINK</span>
+                <p class="mono-code text-[10px] text-gray-500 mt-2 tracking-widest uppercase">Decentralized Insight Knowledge Protocol</p>
             </div>
-            <p class="mono-code text-[10px] text-gray-500 uppercase tracking-[0.5em] text-center px-4">
-                &copy; 2026 Airdrop Insight Knowledge<br><span class="text-cyan-900">System Online</span>
-            </p>
+            <div class="flex gap-10">
+                <a href="https://x.com/AINKCOIN" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-cyan-400 text-2xl"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://t.me/AinkcoinOfficial" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-cyan-400 text-2xl"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <p class="mono-code text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2026 Secured by Neural Analytics</p>
         </div>
     </footer>
 
     <script>
+        // High-Security Clipboard Interaction
         function copyAddress() {
-            const address = document.getElementById('ca').innerText;
+            const address = "0xE5FA436a7424a28fc32CA101cfDB4c39709521A9";
             navigator.clipboard.writeText(address).then(() => {
-                const copyText = document.getElementById('copyText');
-                copyText.innerText = 'Copied!';
-                setTimeout(() => { copyText.innerText = 'Copy'; }, 2000);
+                const btnText = document.getElementById('copyText');
+                btnText.innerText = 'COPIED TO SYSTEM!';
+                btnText.classList.add('text-white');
+                setTimeout(() => { 
+                    btnText.innerText = 'COPY CA'; 
+                    btnText.classList.remove('text-white');
+                }, 2000);
+            }).catch(err => {
+                console.error('Security Block: Clipboard access denied', err);
             });
         }
     </script>
